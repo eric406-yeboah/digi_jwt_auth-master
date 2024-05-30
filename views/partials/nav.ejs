@@ -1,0 +1,16 @@
+<nav>
+    <h1><a href="/">Digimon Cards</a></h1>
+    <ul>
+      <% if (user) { %>
+          <li>Welcome, <%= user.username %></li>
+          <li><a href="/logout" class="logout btn">Log out</a></li>
+        <% } else { %>
+          <li><a href="/login">Log in</a></li>
+          <li><a href="/signup" class="btn">Sign up</a></li>
+        <% } %>
+    </ul>
+</nav>
+
+<!-- in authMiddleware thanks to "res.locals"
+that allows you to pass data from middleware to your view templates. 
+Using res.locals is a common way to pass data from the server to your view templates -->

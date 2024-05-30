@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header') %>
+<body>
+    <%- include('./partials/nav') %>
+
+    <div class="authform">
+        <section class="formContainer">
+          <div class="upper">
+            <h1>Sign up</h1>
+            <h6>to access your cards</h6>
+          </div>
+          <div class="lower">
+            <form action="/signup" method="POST" autocomplete="off" novalidate>
+              <div class="input-group">
+                <input type="text" name="username" id="username">
+                <label for="username">Username</label>
+              </div>
+              <div class="username error"></div>
+              <div class="input-group">
+                <input type="email" name="email" id="email">
+                <label for="email">Email</label>
+              </div>
+              <div class="email error"></div>
+              <div class="input-group">
+                <input type="password" name="password" id="password">
+                <label for="password">Password</label>
+              </div>
+              <div class="password error"></div>
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </section>
+        <figure>
+          <img src="/img/digi.jpg" alt="digi">
+        </figure>
+    </div>
+
+    <%- include('./partials/footer') %>
+
+    <script src="/js/signup.js"></script>
+</body>
+</html>
+
+<!-- required attributes removed to see the initial
+error messages -->
+
+<!-- Why relative paths? 
+
+ the browser interprets it as being relative to the current URL or the base URL where the form is being displayed.
+
+ This works because Express.js is set up to handle routes and requests based on the URL paths relative to the root URL, which is "http://localhost:4000." So, when a request is made to "/signup," Express.js will route that request to the appropriate route handler in your application.
+
+-->

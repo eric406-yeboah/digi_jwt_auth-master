@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header') %>
+<body>
+    <%- include('./partials/nav') %>
+
+    <div class="authform login">
+        <section class="formContainer">
+          <div class="upper">
+            <h1>Login</h1>
+            <h6>to access your cards</h6>
+          </div>
+          <div class="lower">
+            <form action="/login" autocomplete="off">
+              <div class="input-group">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Email</label>
+              </div>
+              <div class="email error"></div>
+              <div class="input-group">
+                <input type="password" name="password" id="password" required>
+                <label for="password">Password</label>
+              </div>
+              <div class="password error"></div>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </section>
+        <figure>
+          <img src="/img/omni.jpg" alt="omni">
+        </figure>
+    </div>
+
+    <%- include('./partials/footer') %>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>
